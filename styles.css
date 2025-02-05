@@ -5,6 +5,9 @@ body {
     background-color: #bafff5;
 }
 
+p, ul li {
+    color: red;
+}
 
 h1 {
     text-align: center;
@@ -12,6 +15,7 @@ h1 {
     margin: 0;
     padding: 0;
 }
+
 h2 {
     color: #496580;
     margin: 0;
@@ -31,17 +35,13 @@ section:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-
 section:nth-of-type(2) {
     background-color: #e6f7ff;
 }
 
-
 section:nth-of-type(3) {
     background-color: #fff0f5;
 }
-
-
 
 a {
     color: #0077cc;
@@ -53,10 +53,8 @@ a:hover {
     text-decoration: underline;
 }
 
-
 @media (max-width: 600px) {
     header h1, header h2, section {
         text-align: center;
     }
 }
-
