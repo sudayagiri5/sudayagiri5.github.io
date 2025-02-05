@@ -5,8 +5,8 @@ body {
     background-color: #bafff5;
 }
 
-p {
-    color: red !important;
+p, ul li {
+    color: red;
 }
 
 h1 {
