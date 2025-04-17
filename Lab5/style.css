@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #74ebd5, #9face6);
+    padding: 40px;
+    color: #222;
+  }
+  
+  .container {
+    background-color: #ffffffcc;
+    border-radius: 15px;
+    padding: 30px 25px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 2.4em;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #4b0082;
+  }
+  
+  .subtext {
+    text-align: center;
+    font-size: 0.95em;
+    margin-bottom: 5px;
+  }
+  
+  form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  label {
+    flex: 1;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  input[type="text"],
+  select {
+    flex: 2;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    background: #f9f9f9;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type="text"]:focus,
+  select:focus {
+    border-color: #4b0082;
+    box-shadow: 0 0 5px rgba(75, 0, 130, 0.3);
+  }
+  
+  input[disabled] {
+    background-color: #eaeaea;
+    color: #666;
+    font-weight: 600;
+  }
+  
+  .slider-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 2;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    accent-color: #4b0082;
+  }
+  
+  output {
+    background-color: #4b0082;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    min-width: 30px;
+    text-align: center;
+    font-size: 1em;
+    margin-right: 10px;
+  }
+  
+  output::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 10px solid #4b0082;
+  }
+  
+  .error {
+    color: #c0392b;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 500px) {
+    .form-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    label {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+  
