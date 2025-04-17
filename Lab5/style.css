@@ -129,14 +129,11 @@ output::before {
 }
 
 .error {
-    color: #ff0033;
-    background-color: #ffe6e6;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-weight: bold;
+    color: #c0392b;
     text-align: center;
-    margin-top: 12px;
-    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-top: 10px;
+
 }
 
 @keyframes fadeIn {
