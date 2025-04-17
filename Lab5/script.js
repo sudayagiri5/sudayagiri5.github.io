@@ -15,16 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
       eur: 0.95,
     };
   
+    // Strict validator: only allows numbers and decimals (e.g., 100, 99.99)
     function validateBill(value) {
-      const number = parseFloat(value);
-      return !isNaN(number) && number >= 0;
+      const pattern = /^(\d+(\.\d{1,2})?)$/;
+      return pattern.test(value.trim());
     }
   
     function calculate() {
       const billValue = billInput.value.trim();
   
       if (!validateBill(billValue)) {
-        error.textContent = "Please enter a valid non-negative number.";
+        error.textContent = "Please enter a valid non-negative number (e.g., 100 or 99.99).";
         tipAmount.value = "";
         totalWithTip.value = "";
         totalWithTax.value = "";
